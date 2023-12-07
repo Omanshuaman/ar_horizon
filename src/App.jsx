@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ARImage from "../pages/ARImage";
+import ARImage from "./pages/ARImage";
 function App() {
   return (
     <BrowserRouter>
