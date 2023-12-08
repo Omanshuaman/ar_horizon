@@ -44,14 +44,14 @@ function App() {
           <a-assets>
             <a-asset-item
               id="animated-asset"
-              src="assets/asset.glb"></a-asset-item>
+              src="https://jobpostingbucket.s3.ap-south-1.amazonaws.com/model/Pizza+Flip+Animation+(1).glb"></a-asset-item>
           </a-assets>
 
           <a-marker
             id="animated-marker"
             type="pattern"
             preset="custom"
-            url="https://jobpostingbucket.s3.ap-south-1.amazonaws.com/markerPattern.patt"
+            url="https://jobpostingbucket.s3.ap-south-1.amazonaws.com/markerPattern1702035702894.patt"
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
