@@ -51,7 +51,7 @@ function App() {
             id="animated-marker"
             type="pattern"
             preset="custom"
-            url={responseData.TargetImagePattFile}
+            url="https://jobpostingbucket.s3.ap-south-1.amazonaws.com/markerPattern.patt"
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;"
