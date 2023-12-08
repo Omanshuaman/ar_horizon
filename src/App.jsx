@@ -29,7 +29,7 @@ function App() {
 
     // Call the fetchData function
     fetchData();
-  }, [param]);
+  }, []);
   return (
     <>
       {responseData ? (
