@@ -394,7 +394,7 @@
           console.log(applicantResponse.data.Item.Id);
 
           window.location.href = "#open-modal";
-          let website = `https://pizza-ar-image-tracking.vercel.app/pizza/ar/index.html?id=${applicantResponse.data.Item.Id}`;
+          let website = `https://ar-horizon-wa2z.vercel.app/?=${applicantResponse.data.Item.Id}`;
           if (website) {
             let qrcodeContainer = document.getElementById("qrcode");
             qrcodeContainer.innerHTML = "";
