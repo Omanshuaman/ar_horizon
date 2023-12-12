@@ -1,10 +1,12 @@
-import React, { useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import ARImage from "./ARImage";
-import Html from "./Html";
-import { useEffect } from "react";
-
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
 function App() {
+  const [responseData, setResponseData] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+  console.log("first");
+  const param = useParams();
   useEffect(() => {
     // Your code to run when the component mounts
     window.location.href = "../src/studio-master/pages/marker/index.html";
@@ -14,15 +16,7 @@ function App() {
       // Optional cleanup code goes here
     };
   }, []);
-
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/:id" element={<ARImage />} />
-        <Route path="/html" element={<Html />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <>dvd</>;
 }
 
 export default App;
