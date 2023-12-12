@@ -71,7 +71,6 @@ function App() {
           <a-entity camera></a-entity>
         </a-scene>
       ) : null}
-      <div>edfc</div>
     </>
   );
 }
