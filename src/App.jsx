@@ -36,7 +36,7 @@ function App() {
   }, [paramValue]);
   return (
     <>
-      {responseData ? (
+      {responseData && (
         <a-scene
           vr-mode-ui="enabled: false;"
           loading-screen="enabled: false;"
@@ -70,7 +70,7 @@ function App() {
 
           <a-entity camera></a-entity>
         </a-scene>
-      ) : null}
+      )}
     </>
   );
 }
