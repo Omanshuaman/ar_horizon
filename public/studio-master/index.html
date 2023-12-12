@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>AR.js Studio</title>
+    <title>AR Horizon</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" />
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,14 +23,19 @@
       <div class="content">
         <p class="title">Web-enabled AR experiences</p>
         <p class="paragraph">
-            AR.js Studio is an open-source AR creation platform for building custom augmented reality experiences.
-            You can create location-based or marker-based AR applications and deploy them straight to the web.
-            That means you won’t have to download any extra apps to access your experience!
-            Working with AR.js Studio doesn’t require any knowledge of coding, either.
-            You can start creating your first AR project right now.
+          AR.js Studio is an open-source AR creation platform for building
+          custom augmented reality experiences. You can create location-based or
+          marker-based AR applications and deploy them straight to the web. That
+          means you won’t have to download any extra apps to access your
+          experience! Working with AR.js Studio doesn’t require any knowledge of
+          coding, either. You can start creating your first AR project right
+          now.
         </p>
 
-        <img class="splashscreen" src="./assets/img/splashscreen.png" alt="Demo image home page"/>
+        <img
+          class="splashscreen"
+          src="./assets/img/splashscreen.png"
+          alt="Demo image home page" />
 
         <p class="lead">Pick your project type</p>
 
@@ -41,10 +46,10 @@
               id="location"
               type="radio"
               name="radio"
-              onclick="radioOnclick(this)"
-            />
+              onclick="radioOnclick(this)" />
             <span>
-                Place your creation on a map, so it remains tied to a physical location.
+              Place your creation on a map, so it remains tied to a physical
+              location.
             </span>
             <span class="checkmark"></span>
           </label>
@@ -55,19 +60,24 @@
               id="marker"
               type="radio"
               name="radio"
-              onclick="radioOnclick(this)"
-            />
+              onclick="radioOnclick(this)" />
             <span>
-                Connect your creation to a visual marker, which can be moved to any location.
+              Connect your creation to a visual marker, which can be moved to
+              any location.
             </span>
             <span class="checkmark"></span>
           </label>
 
           <div class="buttons-container">
-            <a onclick="anchorOnclick(this)" id="start-building" class="primary-button">Start building</a>
+            <a
+              onclick="anchorOnclick(this)"
+              id="start-building"
+              class="primary-button"
+              >Start building</a
+            >
           </div>
           <feedback-button></feedback-button>
-          <div id="error" class="error" style="visibility: hidden;">
+          <div id="error" class="error" style="visibility: hidden">
             Please, select a project type.
           </div>
         </div>
