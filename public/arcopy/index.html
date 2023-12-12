@@ -30,9 +30,10 @@
           console.error("Error fetching data:", error);
         }
       });
-      AFRAME.registerComponent("foo", {
+      AFRAME.registerComponent("model-loaded", {
         init: function () {
           this.el.addEventListener("model-loaded", (e) => {
+            // Remove the loading text
             document.querySelector("#loadingEl").remove();
           });
         },
@@ -66,7 +67,7 @@
           cursor="fuse: false; rayOrigin: mouse;"
           id="markerA"
         >
-           <a-entity id='loadingEl'></a-entity>
+          <a-text id="loadingEl" value="Loading..." align="center"></a-text>
 
           <a-entity
             id="bowser-model"
