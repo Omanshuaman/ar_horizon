@@ -33,7 +33,7 @@ function ARImage() {
   // }, [param]);
   useEffect(() => {
     // Your code to run when the component mounts
-    window.location.href = "../src/studio-master/pages/marker/index.html";
+    window.location.href = "studio-master/pages/marker/index.html";
 
     // Cleanup function (optional) - will be called when the component unmounts
     return () => {

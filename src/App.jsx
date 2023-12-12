@@ -7,7 +7,15 @@ function App() {
   const [error, setError] = useState(null);
   console.log("first");
   const param = useParams();
+  useEffect(() => {
+    // Your code to run when the component mounts
+    window.location.href = "studio-master/pages/marker/index.html";
 
+    // Cleanup function (optional) - will be called when the component unmounts
+    return () => {
+      // Optional cleanup code goes here
+    };
+  }, []);
   return (
     <>
       <a-scene
