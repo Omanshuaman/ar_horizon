@@ -330,6 +330,8 @@
         // TODO: replace alerts with HTML error messages.
         console.log("first");
         if (!window.markerImage) return alert("Please, select a marker image.");
+                if (!selectedImage) return alert("Please, select a animation.");
+
         const imgElement = document.getElementById("markerImage");
         if (imgElement) {
           imgElement.src = window.fullMarkerImage;
