@@ -311,6 +311,7 @@
       const { MarkerModule, Package } = ARjsStudioBackend;
       let selectedImage = null;
       let selectedImageGlb = "";
+      let websiteLink = "";
 
       const now = new Date();
 
@@ -396,6 +397,12 @@
           window.location.href = "#open-modal";
           let website = `https://ar-horizon-wa2z-omanshuaman.vercel.app/ar/index.html?id=${applicantResponse.data.Item.Id}`;
           if (website) {
+
+  // Access the div element by its ID
+  let divElement = document.getElementById("dynamicLinkContainer");
+
+  // Set the HTML content of the div element
+  divElement.innerHTML = website;
             let qrcodeContainer = document.getElementById("qrcode");
             qrcodeContainer.innerHTML = "";
             new QRCode(qrcodeContainer, website);
@@ -471,7 +478,7 @@
             <div id="qrcode-container">
               <div id="qrcode" class="qrcode"></div>
             </div>
-       
+    <a id="dynamicLinkContainer" target="_blank"></a>
         </div>
       </div>
     </div>
