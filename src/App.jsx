@@ -1,57 +1,33 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import axios from "axios";
-function App() {
-  const [responseData, setResponseData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
-  console.log("first");
-  const param = useParams();
-  useEffect(() => {
-    // Your code to run when the component mounts
-    window.location.href = "studio-master/pages/marker/index.html";
+import { useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
-    // Cleanup function (optional) - will be called when the component unmounts
-    return () => {
-      // Optional cleanup code goes here
-    };
-  }, []);
+function App() {
+  const [count, setCount] = useState(0);
+
   return (
     <>
-      <a-scene
-        vr-mode-ui="enabled: false;"
-        loading-screen="enabled: false;"
-        renderer="logarithmicDepthBuffer: true;"
-        arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
-        id="scene"
-        embedded
-        gesture-detector>
-        <a-assets>
-          <a-asset-item
-            id="animated-asset"
-            src="https://jobpostingbucket.s3.ap-south-1.amazonaws.com/model/Pizza+Flip+Animation+(1).glb"></a-asset-item>
-        </a-assets>
-
-        <a-marker
-          id="animated-marker"
-          type="pattern"
-          preset="custom"
-          url="https://jobpostingbucket.s3.ap-south-1.amazonaws.com/markerPattern1702035702894.patt"
-          raycaster="objects: .clickable"
-          emitevents="true"
-          cursor="fuse: false; rayOrigin: mouse;"
-          id="markerA">
-          <a-entity
-            id="bowser-model"
-            scale="2.078150572818595 2.078150572818595 2.078150572818595"
-            animation-mixer="loop: repeat"
-            gltf-model="#animated-asset"
-            class="clickable"
-            gesture-handler></a-entity>
-        </a-marker>
-
-        <a-entity camera></a-entity>
-      </a-scene>
+      <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src={viteLogo} className="logo" alt="Vite logo" />
+        </a>
+        <a href="studio-master/pages/marker/index.html" target="_blank">
+          <img src={reactLogo} className="logo react" alt="React logo" />
+        </a>
+      </div>
+      <h1>Vite + React</h1>
+      <div className="card">
+        <button onClick={() => setCount((count) => count + 1)}>
+          count is {count}
+        </button>
+        <p>
+          Edit <code>src/App.jsx</code> and save to test HMR
+        </p>
+      </div>
+      <p className="read-the-docs">
+        Click on the Vite and React logos to learn more
+      </p>
     </>
   );
 }

@@ -1,5 +1,5 @@
 {
-  "name": "vite",
+  "name": "ar_horizon",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,11 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^0.26.1",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-iframe": "^1.8.5",
-    "react-router-dom": "^6.20.1"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.37",
