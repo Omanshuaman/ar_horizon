@@ -51,6 +51,7 @@ function App() {
               src={responseData.TargetGlbFile}></a-entity>
           </a-assets>
 
+          <a-assets></a-assets>
           <a-marker
             id="animated-marker"
             type="pattern"
@@ -59,13 +60,19 @@ function App() {
             raycaster="objects: .clickable"
             emitevents="true"
             cursor="fuse: false; rayOrigin: mouse;">
+            <a-entity id="loadingEl"></a-entity>
+
             <a-entity
               id="bowser-model"
-              scale="2.078150572818595 2.078150572818595 2.078150572818595"
-              animation-mixer1="loop: repeat"
+              scale="1 1 1"
+              animation-mixer="loop: repeat"
               gltf-model="#animated-asset"
               class="clickable"
               gesture-handler></a-entity>
+
+            <a-entity
+              raycaster="objects: .clickable"
+              cursor="fuse: false; rayOrigin: mouse;"></a-entity>
           </a-marker>
 
           <a-entity camera></a-entity>
